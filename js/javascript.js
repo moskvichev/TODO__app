@@ -23,9 +23,10 @@ function submitButton() {
     if (point.value !== '') {
         addTodo(point);
         point.value = '';
+        document.getElementById('error').style.display = 'none';
     } else {
         error();
-    }
+    }    
  
     console.log(point.value);
 }
