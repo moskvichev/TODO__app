@@ -55,10 +55,23 @@ function watchFiles() {
   gulp.watch("./js/**/*.js", browserReload);
 }
 
+function build(done) {
+  gulp.src('./scss/**/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      errorLogToConsole: true,
+      outputStyle: 'compressed'
+    }))
+    .on('error', console.error.bind(console))    
+    .pipe(rename({suffix: '.min'}))
+    .pipe(sourcemaps.write('./'))
+    .pipe( gulp.dest('./css/') )
+    done();
+}
+
 gulp.task('default', gulp.parallel(sync, watchFiles));
 gulp.task(sync);
-
-
-// gulp.task(styles);
+gulp.task(build);
+gulp.task(watchSass);
 
 // exports.default = defaultSomeTask;
