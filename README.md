@@ -34,3 +34,11 @@ $ npm install --save-dev gulp-autoprefixer
 $ npm install --save-dev gulp-sourcemaps
 $ npm install --save-dev browser-sync
 ```
+После этого можно использовать команды: 
+
+```
+$ gulp // запускает все процессы одновременно
+$ gulp build // процесс сборки стилей (собирает и отключается)
+$ gulp watchSass // наблюдает за изменениями стилей
+$ gulp sync // открывает браузер
+```
