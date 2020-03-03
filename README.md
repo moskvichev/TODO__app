@@ -9,9 +9,6 @@ $ npm install -g bower
 После установки bower, в дериктории файлов установить компоненты менеджера: 
 ```
 $ bower init
-$ bower install bootstrap --save
-$ bower install Font-Awesome --save
-$ bower install gulp --save
 ```
 Команда `bower list` покажет установленные компоненты, что будет подтверждать их правильную установку
 ```
@@ -26,14 +23,7 @@ $ npm install gulp-cli -g
 $ npm install gulp -D 
 $ npx -p touch nodetouch gulpfile.js
 ```
-Установить инструменты для gulp:
-```
-$ npm install --save-dev gulp-rename
-$ npm install --save-dev gulp-sass
-$ npm install --save-dev gulp-autoprefixer
-$ npm install --save-dev gulp-sourcemaps
-$ npm install --save-dev browser-sync
-```
+
 После этого можно использовать команды: 
 
 ```
